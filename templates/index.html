@@ -1,0 +1,87 @@
+
+   
+     <!--carosuel -->
+{% extends 'base/base.html' %}
+
+{% block container %}
+    
+    {% include 'base/carousel.html' %}
+
+{% lorem 3 p %}
+    {{lorem | safe|truncatechars:20}}
+<ul>
+  {% for name in names %}
+ 
+    {% if name not in "yusuf" %}
+      <li>{{ name | title }}</li>
+    {% endif %}
+    {% empty %}
+     isimler bulunamadi
+  {% endfor %}
+</ul>
+
+    <h2>Incele <span>{{url }}</span></h2>
+      <div class="container mt-4">
+            <div class="card-deck mb-3 text-center">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Single</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$49 <small class="text-muted">/ day</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Breakfast included</li>
+                    <li>Lunch included</li>
+                    <li>Free Wifi</li>
+                    <li></li>
+                  </ul>
+                  <button type="button" class="btn btn-lg btn-outline-primary">Check Room</button>
+                </div>
+              </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Double</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$79 <small class="text-muted">/ day</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Breakfast included</li>
+                    <li>Lunch included</li>
+                    <li>Free Wifi</li>
+                    <li></li>
+                  </ul>
+                  <button type="button" class="btn btn-lg btn-outline-primary">Check Room</button>
+                </div>
+              </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Class</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$129 <small class="text-muted">/ day</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li></li>
+                    <li>Breakfast included</li>
+                    <li>Lunch included</li>
+                    <li>Dinner included</li>
+                    <li>Free Wifi</li>
+                  </ul>
+                  <button type="button" class="btn btn-lg btn-outline-primary">Check Room</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      <div class="container">
+          <div class="jumbotron mt-2">
+            <h1 class="display-4">About Us</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+      </div>
+      
+
+{% endblock %}

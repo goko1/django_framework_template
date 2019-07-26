@@ -1,0 +1,15 @@
+{% include 'base/components/head.html' %}
+{% include 'base/components/navbar.html' %}
+
+
+<div class="container">
+        {% block container %}
+        {% endblock %}
+</div>
+
+<div class="container-fluid">
+        {% block container-fluid %}
+        {% endblock %}
+</div>
+
+{% include 'base/components/footer.html' %}
